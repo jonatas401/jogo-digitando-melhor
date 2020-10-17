@@ -1,0 +1,44 @@
+#main{
+    position: absotule;
+    margin-top:10px;
+    margin-left:150px;
+
+}
+#texto{
+    margin-top: 100px;
+    margin-left: 10%;
+    padding: 10px;
+    background-color: rgb(109, 128, 128);
+    width:50%;
+
+}
+.tempo{  
+    margin-left:30%;
+    display: inline;
+
+}
+#segundos, #frase{
+    display: inline;
+    
+}
+
+table{
+    margin-top: 10px;
+    padding: 20px;
+    margin-left: 100px;
+    border-collapse: collapse;
+    width: 50%;
+
+}
+
+th,td{
+    padding: 15px;
+    border: 1px solid #31bbe6;
+    text-align: center;  
+    
+}
+#detalhes{
+    margin-left:30%;
+    margin-top: 10px;
+
+}

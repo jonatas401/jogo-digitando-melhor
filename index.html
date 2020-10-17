@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="main.js"  defer></script>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+
+
+<body>
+            <div id="main">
+       
+            <P id="texto">"Praesent venenatis dui ut libero fermentum non sagittis tellus venenatis"</P>
+            <div class="tempo">
+                <div id="segundos">15</div>
+                segundos
+            </div>
+            <br><br>
+            <div class="tempo">
+                <div id="frase"></div>
+                palavras
+            </div>
+
+
+            <br>
+        <input id="nome" type="text" placeholder="coloque seu nome" ><br>
+        <textarea  style="width: 70%;" id="area" cols="130" rows="5" onclick="y()" > </textarea>
+       
+       <div>
+            <button onclick="reload()">jogar novamente</button>
+       </div>
+        <div id="detalhes">
+            <span id="caracteres-digitados">0</span>
+            <span>caracteres digitados</span>
+            <br>
+            <span id="palavras-digitadas">0</span>
+            <span>palavras digitadas</span>
+        </div>
+                <h1 style="margin-left:30% ;">placar</h1>
+        
+       
+        
+        
+        
+        <table>
+            <tr>
+                <th>nome</th>
+                <th>Nº de PALAVRA</th>
+            </tr>
+            <tr>
+                <td id="jogador"></td>
+                <td id="resultado"></td>
+
+            </tr>
+        </table>
+        
+    </div>
+
+    
+   
+</body>
+<html>
