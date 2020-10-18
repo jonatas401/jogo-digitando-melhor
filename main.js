@@ -26,7 +26,7 @@ campo.attr("disabled" , false);
 campo.val("");
 $("#caracteres-digitados").text("0");
 $("#palavras-digitadas").text("0");
-$("#segundos").text("15");
+$("#segundos").text("20");
 $("#nome").val("");
 
 mudaTexto();
@@ -48,23 +48,35 @@ let time = segundos - 1;
 
 }
 
-//quando o tempo acabar a funcção ira colocar os daos na tabela
+//quando o tempo acabar a função ira colocar os daos na tabela
 
 function resultado(){
+    let nome = $("#nome").val();
+    let frase = campo.val();
+    let nPalavras = frase.split(" ").length;
 
-//colocando na tabela a quantidade de palavras digitadas
-/*let frase = campo.val();
-let nPalavrasDigitadas = frase.split(" ").length;
-$("#resultado").text(nPalavrasDigitadas);*/
+   
+    let tabela = document.getElementById("tabela");
+    let linha = tabela.insertRow();
+    linha.insertCell(0).innerHTML = nome;
+    linha.insertCell(1).innerHTML = nPalavras;
+    //criando botão dinamico
+    let btn = document.createElement('button')
+    linha.insertCell(2).append(btn)
+    btn.innerHTML = "remover"
+    btn.style.background = 'black'
+    btn.style.padding = '5px'
+    btn.style.width = '80px'
+    btn.style.color = 'white'
+   
+    btn.onclick = function(){
+        let i = linha.parentNode.parentNode.rowIndex;
+        document.getElementById("tabela").deleteRow(i);
+        
+        
+    }
 
-// colocando na tabela o nome
-lista();
 
-
-/*nome = $("#nome").val();
-nome1.push(nome);
-console.log(nome1);
-$("#jogador").text(nome);*/
 }
 
 // colocando textos aleatórios
@@ -91,42 +103,4 @@ let numFrase  = $("#frase").text(numPalavra);
 }
 
 
-
-;
-function lista(){
-        let nome = $("#nome").val();
-        let frase = campo.val();
-        let nPalavras = frase.split(" ").length;
-  
-       
-        let tabela = document.getElementById("tabela");
-        let linha = tabela.insertRow();
-        linha.insertCell(0).innerHTML = nome;
-        linha.insertCell(1).innerHTML = nPalavras;
-        //criando botão dinamico
-        let btn = document.createElement('button')
-        linha.insertCell(2).append(btn)
-        btn.innerHTML = "remover"
-        btn.style.background = 'black'
-        btn.style.padding = '5px'
-        btn.style.width = '80px'
-        btn.style.color = 'white'
-       
-        btn.onclick = function(){
-            let i = linha.parentNode.parentNode.rowIndex;
-            document.getElementById("tabela").deleteRow(i);
-            
-            
-        }
-
-
- 
-
-
-
-
-
-    
-    
-}
 
