@@ -2,6 +2,7 @@
     position: absotule;
     margin-top:10px;
     margin-left:150px;
+    width: 80%;
 
 }
 #texto{
@@ -24,21 +25,28 @@
 
 table{
     margin-top: 10px;
-    padding: 20px;
-    margin-left: 100px;
-    border-collapse: collapse;
-    width: 50%;
+    border-top:1px solid gray;
+    width: 70%;
+    text-align: center;
 
 }
-
-th,td{
-    padding: 15px;
-    border: 1px solid #31bbe6;
-    text-align: center;  
-    
+tr{
+    border-top:1px solid gray;
+    margin-left: 250px;
 }
+
+
 #detalhes{
     margin-left:30%;
     margin-top: 10px;
 
+}
+
+span.nome{
+    margin-left:9%;
+    font-weight: bold;
+}
+span.palavras{
+    margin-left: 7%;
+    font-weight: bold;
 }
